@@ -272,6 +272,17 @@ class PluginManager extends AbstractPluginManager
         $em->persist($Csv);
         $em->flush();
 
+        $Csv = new Csv();
+        ++$rank;
+        $Csv->setCsvType($CsvType)
+            ->setEntityName('Plugin\ProductReviewReplyable\Entity\ProductReview')
+            ->setFieldName('reply')
+            ->setReferenceFieldName('reply')
+            ->setDispName('お店からの返信')
+            ->setSortNo($rank);
+        $em->persist($Csv);
+        $em->flush();
+
         return $CsvType;
     }
 
