@@ -25,7 +25,7 @@ use Symfony\Component\HttpFoundation\Request;
 class ConfigController extends \Eccube\Controller\AbstractController
 {
     /**
-     * @Route("/%eccube_admin_route%/product_review/config", name="product_review4_admin_config")
+     * @Route("/%eccube_admin_route%/product_review/config", name="product_review_replyable_admin_config")
      * @Template("@ProductReviewReplyable/admin/config.twig")
      *
      * @param Request $request
